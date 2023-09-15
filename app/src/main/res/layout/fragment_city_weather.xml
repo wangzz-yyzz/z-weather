@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cityFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="back"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/back_100d" />
+
+    <LinearLayout
+        android:id="@+id/frag"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/top">
+
+                <TextView
+                    android:id="@+id/city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重庆"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/add_city"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="100dp"
+                    android:text="ADD CITY"
+                    android:background="@color/color_trans"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/current_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:text="3℃"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frag_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_temp"
+                android:layout_marginRight="30sp"
+                android:text="晴"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frag_maxmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/frag_condition"
+                android:layout_toRightOf="@id/frag_condition"
+                android:text="20/14℃"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/frag_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frag_condition">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/frag_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginTop="50sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="今天"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月19日"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="雨"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frag_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50sp"
+                        android:layout_toRightOf="@id/frag_first"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="周二"
+                            android:layout_gravity="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月20日"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="雨"
+                            android:layout_gravity="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frag_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50sp"
+                        android:layout_toRightOf="@id/frag_second"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="周三"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月21日"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="雨"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frag_forth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50sp"
+                        android:layout_toRightOf="@id/frag_third"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="周四"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月22日"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="雨"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frag_fifth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50sp"
+                        android:layout_toRightOf="@id/frag_forth"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="周五"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月23日"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="雨"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frag_sixth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50sp"
+                        android:layout_toRightOf="@id/frag_fifth"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="周六"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月24日"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="雨"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frag_seventh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frag_condition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50sp"
+                        android:layout_toRightOf="@id/frag_sixth"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/frag_today6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="周日"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_date6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4月25日"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/frag_wimag6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/frag_condition6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="雨"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/frag_value6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="14/19℃"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/frag_index"
+                android:layout_width="402dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frag_block"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <include
+                    layout="@layout/life_index"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
